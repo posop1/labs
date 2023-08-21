@@ -1,22 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-
-	fmt.Println(getCircleRadius())
-
+	fmt.Println(getCircleArea(2))
 }
 
-func getCircleRadius() float64 {
+func getCircleRadius(radius float64) float64 {
 	pi := 3.14
-	var radius float64
 
-	fmt.Println("Введите радиус окружности. ")
+	result := 2 * pi * radius
 
-	fmt.Scan(&radius)
+	return result
+}
 
-	result := (radius * radius) * pi
+func getCircleArea(radius float64) float64 {
+	pi := 3.14
+
+	result := pi * math.Pow(radius, 2)
 
 	return result
 }
